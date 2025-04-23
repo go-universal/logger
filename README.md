@@ -91,8 +91,7 @@ Used to configure and create a `Logger` instance:
 
 - **`NewLogger()`**: Initializes a `LoggerBuilder` with default settings.
 - **`SetBufferSize(size uint)`**: Configures the buffer size for the logger's channel.
-- **`Development()`**: Enables development mode for the logger.
-- **`Production()`**: Enables production mode for the logger.
+- **`Env(dev bool)`**: Det development or production mode for the logger.
 - **`Simple()`**: Enables simple formatting for the logger.
 - **`Structured()`**: Enables structured formatting for the logger.
 - **`Silent()`**: Makes the logger silent (no output).

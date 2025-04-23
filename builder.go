@@ -39,15 +39,9 @@ func (b *LoggerBuilder) SetBufferSize(size uint) *LoggerBuilder {
 	return b
 }
 
-// Development enables development mode for the logger.
-func (b *LoggerBuilder) Development() *LoggerBuilder {
-	b.dev = true
-	return b
-}
-
-// Production enables production mode for the logger.
-func (b *LoggerBuilder) Production() *LoggerBuilder {
-	b.dev = false
+// Env det development or production mode
+func (b *LoggerBuilder) Env(dev bool) *LoggerBuilder {
+	b.dev = dev
 	return b
 }
 
