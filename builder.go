@@ -39,27 +39,21 @@ func (b *LoggerBuilder) SetBufferSize(size uint) *LoggerBuilder {
 	return b
 }
 
-// Env det development or production mode
-func (b *LoggerBuilder) Env(dev bool) *LoggerBuilder {
+// SetEnv set development or production mode
+func (b *LoggerBuilder) SetEnv(dev bool) *LoggerBuilder {
 	b.dev = dev
 	return b
 }
 
-// Simple enables simple formatting for the logger.
-func (b *LoggerBuilder) Simple() *LoggerBuilder {
-	b.simple = true
+// SetSimple set simple formatting for the logger.
+func (b *LoggerBuilder) SetSimple(simple bool) *LoggerBuilder {
+	b.simple = simple
 	return b
 }
 
-// Structured enables structured formatting for the logger.
-func (b *LoggerBuilder) Structured() *LoggerBuilder {
-	b.simple = false
-	return b
-}
-
-// Silent makes the logger silent (no output).
-func (b *LoggerBuilder) Silent() *LoggerBuilder {
-	b.silent = true
+// SetSilent set silent mode for logger (no print to console).
+func (b *LoggerBuilder) SetSilent(silent bool) *LoggerBuilder {
+	b.silent = silent
 	return b
 }
 

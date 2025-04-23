@@ -91,10 +91,9 @@ Used to configure and create a `Logger` instance:
 
 - **`NewLogger()`**: Initializes a `LoggerBuilder` with default settings.
 - **`SetBufferSize(size uint)`**: Configures the buffer size for the logger's channel.
-- **`Env(dev bool)`**: Det development or production mode for the logger.
-- **`Simple()`**: Enables simple formatting for the logger.
-- **`Structured()`**: Enables structured formatting for the logger.
-- **`Silent()`**: Makes the logger silent (no output).
+- **`SetEnv(dev bool)`**: Set development or production mode for the logger.
+- **`SetSimple(simple bool)`**: Set simple formatting for the logger.
+- **`SetSilent(silent bool)`**: Set silent mode for logger (no print to console).
 - **`Path(root string)`**: Sets the root directory for log files.
 - **`Prefix(prefix string)`**: Sets the prefix for log file names.
 - **`Extension(ext string)`**: Sets the extension for log file names.

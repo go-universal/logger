@@ -13,7 +13,7 @@ func TestLogger(t *testing.T) {
 		SetBufferSize(10).
 		Extension("log").
 		Daily().
-		Simple().
+		SetSimple(true).
 		JalaaliFormatter().
 		Logger()
 
